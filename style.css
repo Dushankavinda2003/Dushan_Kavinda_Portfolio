@@ -1,0 +1,488 @@
+/* -----------------------------
+   Basic page settings
+----------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f7f9fc;
+    color: #172033;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* -----------------------------
+   Header
+----------------------------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 7%;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5e9f2;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #4d7cff;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #4d7cff;
+}
+
+.menu-btn,
+.theme-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* -----------------------------
+   Common sections
+----------------------------- */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 7%;
+}
+
+.alt-section {
+    max-width: none;
+    background: #eef3ff;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+}
+
+.small-title {
+    color: #4d7cff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+/* -----------------------------
+   Hero
+----------------------------- */
+.hero {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin: 8px 0;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #4d7cff;
+}
+
+.hero p:not(.small-title) {
+    max-width: 600px;
+    color: #5c667a;
+}
+
+.hero-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-photo img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 15px 40px rgba(25, 40, 70, 0.18);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #4d7cff;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(77, 124, 255, 0.25);
+}
+
+.btn.secondary {
+    background: #172033;
+}
+
+/* -----------------------------
+   About
+----------------------------- */
+.about-grid,
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.about-card,
+.details-card,
+.contact-info,
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(30, 45, 80, 0.07);
+}
+
+.about-card h3,
+.details-card h3,
+.contact-info h3 {
+    margin-bottom: 12px;
+}
+
+.about-card h3:not(:first-child) {
+    margin-top: 25px;
+}
+
+.skills-list,
+.details-list {
+    list-style: none;
+}
+
+.skills-list li {
+    display: inline-block;
+    margin: 6px 5px 0 0;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #eaf0ff;
+    color: #355bd1;
+}
+
+.details-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 9px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.details-list span {
+    width: 25px;
+}
+
+/* -----------------------------
+   Education
+----------------------------- */
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    background: white;
+    border-left: 5px solid #4d7cff;
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 0 12px 12px 0;
+}
+
+.year {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4d7cff;
+}
+
+/* -----------------------------
+   Projects
+----------------------------- */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    border: 1px solid #ccd4e4;
+    background: white;
+    padding: 9px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #4d7cff;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(30, 45, 80, 0.08);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #eef3ff;
+}
+
+.project-content {
+    padding: 22px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 9px;
+    border-radius: 15px;
+    background: #eaf0ff;
+    color: #355bd1;
+    margin-bottom: 8px;
+}
+
+.project-content h3 {
+    margin-bottom: 8px;
+}
+
+.project-content p {
+    color: #606a7d;
+    margin-bottom: 12px;
+}
+
+.project-content a {
+    color: #4d7cff;
+    font-weight: bold;
+}
+
+/* -----------------------------
+   Contact
+----------------------------- */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    padding: 8px 14px;
+    border: 1px solid #ccd4e4;
+    border-radius: 8px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ccd4e4;
+    border-radius: 8px;
+    padding: 11px;
+    font: inherit;
+    margin-bottom: 8px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.form-message {
+    font-weight: bold;
+    min-height: 24px;
+}
+
+/* -----------------------------
+   Footer
+----------------------------- */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #172033;
+    color: white;
+}
+
+/* -----------------------------
+   Dark mode
+----------------------------- */
+body.dark {
+    background: #111827;
+    color: #edf2f7;
+}
+
+body.dark .header,
+body.dark .about-card,
+body.dark .details-card,
+body.dark .project-card,
+body.dark .timeline-item,
+body.dark .contact-info,
+body.dark .contact-form,
+body.dark .filter-btn {
+    background: #1f2937;
+    color: #edf2f7;
+}
+
+body.dark .alt-section {
+    background: #182235;
+}
+
+body.dark .hero p:not(.small-title),
+body.dark .project-content p {
+    color: #c4cbd7;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+    background: #111827;
+    color: white;
+    border-color: #4b5563;
+}
+
+/* -----------------------------
+   Responsive design
+----------------------------- */
+@media (max-width: 800px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        padding: 20px 7%;
+        background: white;
+        border-bottom: 1px solid #e5e9f2;
+    }
+
+    body.dark .nav {
+        background: #1f2937;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .hero,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding: 65px 5%;
+    }
+
+    .header {
+        padding: 14px 5%;
+    }
+
+    .hero-photo img {
+        width: 220px;
+        height: 220px;
+    }
+}
